@@ -1,0 +1,199 @@
+/* General Styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background: url("images/bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  font-weight: bolder;
+  font-size: 1.13rem;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Feedback Box Styling */
+.feedback-box {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 90%;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Header Styling */
+h1 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+p {
+  color: #666;
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Form Group Styling */
+.form-group {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+/* Label Styling */
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #444;
+  font-size: 16px;
+}
+
+/* Input, Select, and Textarea Fields */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border 0.3s ease-in-out;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #4ca1af;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+  min-height: 120px;
+}
+
+/* Button Styling */
+.btn-submit {
+  background: linear-gradient(45deg, #28649cc5, #305280);
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+  width: 100%;
+}
+
+.btn-submit:hover {
+  background: linear-gradient(45deg, #28577e, #1f61b8);
+  transform: scale(1.05);
+}
+
+/* Button Active/Focus Effect */
+.btn-submit:active {
+  transform: scale(1);
+}
+
+/* Form Field Focus Effects */
+input:focus,
+textarea:focus {
+  border-color: #4ca1af;
+  box-shadow: 0 0 5px rgba(76, 161, 175, 0.7);
+}
+
+select:focus {
+  border-color: #4ca1af;
+  box-shadow: 0 0 5px rgba(76, 161, 175, 0.7);
+}
+
+/* Smooth Fade-in Effect for the Form */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Smooth Fade-in for Button Hover */
+@keyframes hoverButton {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+/* Shadow Effect for Button on Hover */
+.btn-submit:hover {
+  animation: hoverButton 0.2s ease-in-out forwards;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .feedback-box {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .btn-submit {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .feedback-box {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 13px;
+  }
+
+  .btn-submit {
+    font-size: 13px;
+    padding: 10px;
+  }
+}

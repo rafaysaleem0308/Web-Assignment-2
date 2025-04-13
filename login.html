@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | SoleStyle</title>
+    <link rel="stylesheet" href="log.css" />
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  </head>
+  <body>
+    <div class="l">
+      <h1 class="logo">SoleStyle</h1>
+    </div>
+    <div class="video-container">
+      <video class="voice" autoplay loop playsinline>
+        <source src="images/a.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="log1">
+      <h2>Welcome Back!</h2>
+      <p class="tagline">Sign in to continue your journey with us.</p>
+      <input
+        type="text"
+        placeholder="Username"
+        class="input-field"
+        id="username"
+      /><br />
+      <input
+        type="password"
+        placeholder="Password"
+        class="input-field"
+        id="password"
+      /><br />
+      <button class="btn">Log In</button>
+      <p class="register">
+        Don't have an account? <a href="Sign.html">Sign up here</a>
+      </p>
+      <p id="error-message" class="error-message"></p>
+    </div>
+
+    <!-- Custom Modal -->
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <h3>Login Successful!</h3>
+        <p>Welcome back to SoleStyle.</p>
+        <button class="close-btn" onclick="closeModal()">OK</button>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        // Set video volume
+        $(".voice")[0].volume = 0.11;
+
+        // Login button click
+        $(".btn").click(function () {
+          const username = $("#username").val().trim();
+          const password = $("#password").val().trim();
+          const errorMessage = $("#error-message");
+
+          if (!username || !password) {
+            errorMessage.text("Please enter both username and password.");
+            return;
+          }
+
+          // Fetch and check credentials
+          checkCredentials(username, password);
+        });
+
+        // Close modal when clicking outside it
+        $(window).on("click", function (event) {
+          const modal = $("#loginModal")[0];
+          if (event.target === modal) {
+            $("#loginModal").hide();
+            window.location.href = "ass_1.html";
+          }
+        });
+      });
+
+      async function checkCredentials(username, password) {
+        const errorMessage = $("#error-message");
+        errorMessage.text("");
+
+        try {
+          const response = await fetch("user_data.json");
+          if (!response.ok) throw new Error("Failed to load user data");
+
+          const users = await response.json();
+          const user = users.find(
+            (u) => u.username === username && u.password === password
+          );
+
+          if (user) {
+            localStorage.setItem("isLoggedIn", "true");
+            localStorage.setItem("currentUser", username);
+            $("#loginModal").show(); // Show modal
+          } else {
+            errorMessage.text("Invalid username or password.");
+          }
+        } catch (error) {
+          console.error("Error:", error);
+          errorMessage.text(
+            "Login service unavailable. Please try again later."
+          );
+        }
+      }
+
+      function closeModal() {
+        $("#loginModal").hide();
+        window.location.href = "ass_1.html";
+      }
+    </script>
+  </body>
+</html>

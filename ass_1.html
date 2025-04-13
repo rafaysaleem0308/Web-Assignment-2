@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- Font Awesome CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <title>SoleStyle</title>
+  </head>
+
+  <body class="d-flex flex-column min-vh-100">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <div class="border-s">
+          <a class="navbar-brand" href="index.html"><h1>SoleStyle</h1></a>
+        </div>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <div class="btn1">
+                <a class="nav-link active" aria-current="page" href="login.html"
+                  >Log in</a
+                >
+              </div>
+            </li>
+            <li class="nav-item">
+              <div class="btn1">
+                <a class="nav-link" href="Chat.html">Chat Box</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Form
+              </a>
+
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="feedback.html">Feedback</a>
+                </li>
+              </ul>
+            </li>
+              <li class="nav-item">
+              <div class="btn1">
+                <a class="nav-link active" aria-current="page" href="Cart_info.html"
+                  >Cart</a
+                >
+              </div>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container-fluid flex-grow-1 px-0">
+      <!-- Carousel -->
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="images/pexels-mnzoutfits-1598508.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div
+              class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100"
+            >
+              <h2>Exclusive Sneakers</h2>
+              <p>Step up your style with the latest sneaker trends.</p>
+              <a href="#" class="btn btn-primary" id="buyNow1">Buy Now</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="images/wallpaperflare.com_wallpaper (1).jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div
+              class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100"
+            >
+              <h2>Elevated Sneakers</h2>
+
+              <p>Effortless style, unmatched comfort, and timeless design.</p>
+              <a href="#" class="btn btn-primary" id="buyNow2">Buy Now</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="images/wallpaperflare.com_wallpaper (3).jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div
+              class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100"
+            >
+              <h2>Casual Collection</h2>
+              <p>Versatile style, all-day comfort, effortlessly chic.</p>
+              <a href="#" class="btn btn-primary" id="buyNow3">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <br />
+      <div class="heading"><h2>Collections</h2></div>
+      <!-- Card Carousel -->
+      <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel">
+        <!-- Carousel Indicators -->
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#cardCarousel"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#cardCarousel"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#cardCarousel"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+
+        <!-- Carousel Inner (Cards Container) -->
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-5 g-4 mx-0">
+              <div class="col">
+                <div class="card h-100">
+                  <img
+                    src="images/pexels-mnzoutfits-1598505.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Ultimate Comfort</h5>
+                    <p class="card-text">
+                      Experience unmatched comfort with a cushioned sole that
+                      supports every step.
+                    </p>
+                    <br />
+                    <h6>
+                      <span class="cut-text">Rs 12,500</span>
+                      <span class="discounted-price">Rs 11,250</span>
+                    </h6>
+                    <a
+                      href="Cart_info.html"
+                      class="btn btn-primary"
+                      id="buyNow4"
+                      >Buy Now</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100">
+                  <img
+                    src="images/the-dk-photography-NUoPWImmjCU-unsplash.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">All-Terrain Grip</h5>
+                    <p class="card-text">
+                      Designed for stability and traction on any surface, from
+                      city streets to rugged trails.
+                    </p>
+                    <br />
+                    <h6>
+                      <span class="cut-text">Rs 12,500</span>
+                      <span class="discounted-price">Rs 11,250</span>
+                    </h6>
+                    <a
+                      href="Cart_info.html"
+                      class="btn btn-primary"
+                      id="buyNow5"
+                      >Buy Now</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100">
+                  <img
+                    src="images/maksim-larin-NOpsC3nWTzY-unsplash.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Featherlight Feel</h5>
+                    <p class="card-text">
+                      Ultra-light materials ensure you move effortlessly
+                      throughout the day.
+                    </p>
+                    <br />
+                    <h6>
+                      <span class="cut-text">Rs 12,500</span>
+                      <span class="discounted-price">Rs 11,250</span>
+                    </h6>
+                    <a href="#" class="btn btn-primary" id="buyNow6">Buy Now</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100">
+                  <img
+                    src="images/sahej-brar-T31E6zBL_n0-unsplash.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Energy Boost</h5>
+                    <p class="card-text">
+                      Responsive cushioning returns energy with every stride for
+                      peak performance.
+                    </p>
+                    <br />
+                    <h6>
+                      <span class="cut-text">Rs 12,500</span>
+                      <span class="discounted-price">Rs 11,250</span>
+                    </h6>
+                    <a href="#" class="btn btn-primary" id="buyNow7">Buy Now</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100">
+                  <img
+                    src="images/sahej-brar-vhM0rH4F7Ik-unsplash.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Street-Ready Style</h5>
+                    <p class="card-text">
+                      A sleek, modern design that pairs perfectly with any
+                      outfit.
+                    </p>
+                    <br />
+                    <h6>
+                      <span class="cut-text">Rs 12,500</span>
+                      <span class="discounted-price">Rs 11,250</span>
+                    </h6>
+                    <a href="#" class="btn btn-primary" id="buyNow8">Buy Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-5 g-4 mx-0">
+              <div class="col">
+                <div class="card h-100">
+                  <img
+                    src="images/aman-jakhar-qGJ_-d1wlEg-unsplash.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Breathable Performance</h5>
+                    <p class="card-text">
+                      Mesh uppers provide superior ventilation to keep your feet
+                      fresh all day.
+                    </p>
+                    <br />
+                    <h6>
+                      <span class="cut-text">Rs 12,500</span>
+                      <span class="discounted-price">Rs 11,250</span>
+                    </h6>
+                    <a href="#" class="btn btn-primary" id="buyNow9">Buy Now</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100">
+                  <img
+                    src="images/joseph-barrientos-4qSb_FWhHKs-unsplash.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Durability Redefined</h5>
+                    <p class="card-text">
+                      Built with high-quality materials to last through every
+                      adventure.
+                    </p>
+                    <br />
+                    <h6>Rs 14,900</h6>
+                    <a href="#" class="btn btn-primary" id="buyNow10"
+                      >Buy Now</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100">
+                  <img
+                    src="images/derrick-payton-Vd8o0cEYsmA-unsplash.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Adaptive Fit</h5>
+                    <p class="card-text">
+                      Engineered for speed with aerodynamic structure and
+                      lightweight cushioning.
+                    </p>
+                    <br />
+                    <h6>
+                      <span class="cut-text">Rs 12,500</span>
+                      <span class="discounted-price">Rs 11,250</span>
+                    </h6>
+                    <a href="#" class="btn btn-primary" id="buyNow11"
+                      >Buy Now</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100">
+                  <img
+                    src="images/giorgio-trovato-b9KdwnKWhRk-unsplash.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Fast & Furious</h5>
+                    <p class="card-text">
+                      A flexible design molds to your foot, offering
+                      personalized support and comfort.
+                    </p>
+                    <br />
+                    <h6>
+                      <span class="cut-text">Rs 13,500</span>
+                      <span class="discounted-price">Rs 10,250</span>
+                    </h6>
+                    <a href="#" class="btn btn-primary" id="buyNow12"
+                      >Buy Now</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100">
+                  <img
+                    src="images/crystal-jo-F45w1xY42BY-unsplash.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Classic Reinvented</h5>
+                    <p class="card-text">
+                      A timeless sneaker with a modern twist, perfect for any
+                      occasion.
+                    </p>
+                    <br />
+                    <h6>
+                      <span class="cut-text">Rs 12,500</span>
+                      <span class="discounted-price">Rs 11,250</span>
+                    </h6>
+                    <a href="#" class="btn btn-primary" id="buyNow13"
+                      >Buy Now</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel Controls -->
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#cardCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#cardCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+
+<!-- Featured Products Section -->
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Featured Products</h2><br>
+  <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner" id="featured-products">
+      <!-- Products will be loaded here dynamically -->
+    </div>
+
+    
+    <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div><br><br>
+    <!-- Footer -->
+    <footer class="footer mt-auto">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>About Us</h3>
+          <p>
+            Delivering quality shoes at your doorstep with the best service.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p>Email: SoleStyle@gmail.com</p>
+          <p>Phone:0333-456-789</p>
+        </div>
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom col-sm-12">
+        <p>&copy; Copy rights</p>
+      </div>
+    </footer>
+
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h3>For Special Discounts in Various Items</h3>
+        <p style="font-size: larger"><b>Log in!</b></p>
+        <a href="login.html"
+          ><button class="close-btn">To Login Page</button></a
+        >
+        <br />
+        <h3 style="font-weight: bolder">OR</h3>
+        <a href="Cart_info.html"
+          ><button class="close-btn" id="buyNow14">Buy Now</button></a
+        >
+      </div>
+    </div>
+    <!-- Modal HTML -->
+<div class="auth-required-modal" id="loginRequiredModal">
+  <div class="auth-modal-container">
+    <div class="auth-modal-top">
+      <h3>Login Required</h3>
+      <button class="auth-modal-close">&times;</button>
+    </div>
+    <div class="auth-modal-main">
+      <p>You must be logged in to access the Chat Box.</p>
+    </div>
+    <div class="auth-modal-bottom">
+      <button class="auth-btn auth-btn-primary">Go to Login</button>
+      <button class="auth-btn auth-btn-secondary">Cancel</button>
+    </div>
+  </div>
+</div>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- jQuery (required for jQuery effects) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- AJAX and JSON functionality -->
+    <script src="ajax-requests.js"></script>
+
+    <!-- jQuery Effects -->
+    <script>
+      $(document).ready(function () {
+        // Add hover effect to cards
+        $(".card").hover(
+          function () {
+            $(this).animate(
+              {
+                boxShadow: "0 0 20px rgba(0,0,0,0.3)",
+              },
+              200
+            );
+          },
+          function () {
+            $(this).animate(
+              {
+                boxShadow: "none",
+              },
+              200
+            );
+          }
+        );
+
+        // Toggle footer visibility
+        $("footer").click(function () {
+          $(this).toggle("slow");
+        });
+
+        // Animate "Buy Now" buttons
+        $(".container.mt-5 .btn-primary").hover(function () {
+          $(this).hover(function () {
+            $(this).animate(
+              {
+                fontSize: "1.01em",
+                padding: "20px",
+              },
+              200
+            );
+          });
+        });
+      });
+    </script>
+
+    <!-- Main Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Check if the user is logged in
+        const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+
+        if (isLoggedIn) {
+          // Select all cards
+          const cards = document.querySelectorAll(".card");
+
+          // Randomly pick 3 cards
+          const randomCards = [];
+          while (randomCards.length < 3) {
+            const randomCard = cards[Math.floor(Math.random() * cards.length)];
+            if (!randomCards.includes(randomCard)) {
+              randomCards.push(randomCard);
+            }
+          }
+
+          // Apply discount to the selected cards
+          randomCards.forEach((card) => {
+            const priceElement = card.querySelector("h6");
+            const originalPrice = priceElement.textContent.trim();
+            const discountedPrice = (
+              parseFloat(originalPrice.replace("Rs ", "")) * 0.9
+            ).toFixed(2); // 10% discount
+
+            // Update the price display
+            priceElement.innerHTML = `
+              <span class="cut-text">Rs ${originalPrice}</span>
+              <span class="discounted-price">Rs ${discountedPrice}</span>
+            `;
+          });
+        }
+      });
+
+      function login_check() {
+        let isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+        return isLoggedIn;
+      }
+
+      // Function to check if the user is logged in before accessing the Chat Box page
+    function checkAccessToChatBox() {
+  if (!login_check()) {
+    const modal = document.getElementById('loginRequiredModal');
+    modal.style.display = 'flex';
+    
+    // Set up button event listeners
+    document.querySelector('.auth-btn-primary').addEventListener('click', () => {
+      window.location.href = "login.html";
+    });
+    
+    document.querySelector('.auth-btn-secondary').addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+    
+    document.querySelector('.auth-modal-close').addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+    
+    return false;
+  }
+  return true;
+}
+      // Add event listener to the Chat Box link
+      document
+        .querySelector('a[href="Chat.html"]')
+        .addEventListener("click", function (event) {
+          if (!checkAccessToChatBox()) {
+            event.preventDefault(); // Prevent default navigation if the user is not logged in
+          }
+        });
+
+      document.querySelectorAll(".btn.btn-primary").forEach(function (button) {
+        button.addEventListener("click", function (event) {
+          event.preventDefault();
+
+          if (login_check()) {
+            alert("User is already logged in.");
+          } else {
+            document.getElementById("loginModal").style.display = "flex"; // Show modal
+          }
+        });
+      });
+
+      function closeModal() {
+        document.getElementById("loginModal").style.display = "none";
+      }
+
+      window.onclick = function (event) {
+        let modal = document.getElementById("loginModal");
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>

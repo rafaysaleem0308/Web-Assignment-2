@@ -1,0 +1,42 @@
+[
+  {
+    "firstName": "Ali",
+    "lastName": "Khan",
+    "phoneNumber": "03001234567",
+    "email": "ali.khan@example.com",
+    "username": "alikhan",
+    "password": "pakistan123"
+  },
+  {
+    "firstName": "Fatima",
+    "lastName": "Ahmed",
+    "phoneNumber": "03331234567",
+    "email": "fatima.ahmed@example.com",
+    "username": "fatimaahmed",
+    "password": "karachi123"
+  },
+  {
+    "firstName": "Muhammad",
+    "lastName": "Raza",
+    "phoneNumber": "03121234567",
+    "email": "m.raza@example.com",
+    "username": "mraza",
+    "password": "lahore123"
+  },
+  {
+    "firstName": "Ayesha",
+    "lastName": "Malik",
+    "phoneNumber": "03211234567",
+    "email": "ayesha.malik@example.com",
+    "username": "ayeshamalik",
+    "password": "islamabad123"
+  },
+  {
+    "firstName": "Usman",
+    "lastName": "Shah",
+    "phoneNumber": "03451234567",
+    "email": "usman.shah@example.com",
+    "username": "usmanshah",
+    "password": "peshawar123"
+  }
+]

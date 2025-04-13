@@ -1,0 +1,108 @@
+{
+  "products": [
+    {
+      "id": "buyNow1",
+      "name": "Exclusive Sneakers",
+      "description": "Step up your style with the latest sneaker trends.",
+      "price": "Rs 12,500",
+      "discounted_price": "Rs 11,250",
+      "image": "https://images.unsplash.com/photo-1600269452121-4f2416e55c28?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+    },
+    {
+      "id": "buyNow2",
+      "name": "Elevated Sneakers",
+      "description": "Effortless style, unmatched comfort, and timeless design.",
+      "price": "Rs 12,500",
+      "discounted_price": "Rs 11,250",
+      "image": "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+    },
+    {
+      "id": "buyNow3",
+      "name": "Casual Collection",
+      "description": "Versatile style, all-day comfort, effortlessly chic.",
+      "price": "Rs 12,500",
+      "discounted_price": "Rs 11,250",
+      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+    },
+    {
+      "id": "buyNow4",
+      "name": "Ultimate Comfort",
+      "description": "Experience unmatched comfort with a cushioned sole that supports every step.",
+      "price": "Rs 12,500",
+      "discounted_price": "Rs 11,250",
+      "image": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+    },
+    {
+      "id": "buyNow5",
+      "name": "All-Terrain Grip",
+      "description": "Designed for stability and traction on any surface, from city streets to rugged trails.",
+      "price": "Rs 12,500",
+      "discounted_price": "Rs 11,250",
+      "image": "https://images.unsplash.com/photo-1600269452121-4f2416e55c28?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+    },
+    {
+      "id": "buyNow6",
+      "name": "Featherlight Feel",
+      "description": "Ultra-light materials ensure you move effortlessly throughout the day.",
+      "price": "Rs 12,500",
+      "discounted_price": "Rs 11,250",
+      "image": "https://images.unsplash.com/photo-1605348532760-6753d2c43329?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+    },
+    {
+      "id": "buyNow7",
+      "name": "Energy Boost",
+      "description": "Responsive cushioning returns energy with every stride for peak performance.",
+      "price": "Rs 12,500",
+      "discounted_price": "Rs 11,250",
+      "image": "https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+    },
+    {
+      "id": "buyNow8",
+      "name": "Street-Ready Style",
+      "description": "A sleek, modern design that pairs perfectly with any outfit.",
+      "price": "Rs 12,500",
+      "discounted_price": "Rs 11,250",
+      "image": "https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+    },
+    {
+      "id": "buyNow9",
+      "name": "Breathable Performance",
+      "description": "Mesh uppers provide superior ventilation to keep your feet fresh all day.",
+      "price": "Rs 12,500",
+      "discounted_price": "Rs 11,250",
+      "image": "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+    },
+    {
+      "id": "buyNow10",
+      "name": "Durability Redefined",
+      "description": "Built with high-quality materials to last through every adventure.",
+      "price": "Rs 14,900",
+      "discounted_price": "Rs 14,900",
+      "image": "https://images.unsplash.com/photo-1600269452121-4f2416e55c28?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+    },
+    {
+      "id": "buyNow11",
+      "name": "Adaptive Fit",
+      "description": "Engineered for speed with aerodynamic structure and lightweight cushioning.",
+      "price": "Rs 12,500",
+      "discounted_price": "Rs 11,250",
+      "image": "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+    },
+    {
+      "id": "buyNow12",
+      "name": "Fast & Furious",
+      "description": "A flexible design molds to your foot, offering personalized support and comfort.",
+      "price": "Rs 13,500",
+      "discounted_price": "Rs 10,250",
+      "image": "https://images.unsplash.com/photo-1605348532760-6753d2c43329?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+    },
+    {
+      "id": "buyNow13",
+      "name": "Classic Reinvented",
+      "description": "A timeless sneaker with a modern twist, perfect for any occasion.",
+      "price": "Rs 12,500",
+      "discounted_price": "Rs 11,250",
+      "image": "https://images.unsplash.com/photo-1605348532760-6753d2c43329?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+    }
+  ]
+}

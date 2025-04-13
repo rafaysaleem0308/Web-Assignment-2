@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign up | SoleStyle</title>
+    <link rel="stylesheet" href="Sign_up.css" />
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  </head>
+  <body>
+    <div class="l">
+      <h1 class="logo">SoleStyle</h1>
+    </div>
+
+    <div class="video-container">
+      <video class="voice" autoplay loop playsinline>
+        <source src="images/a.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div class="log1">
+      <h2>Sign Up!</h2>
+      <p class="tagline">Begin your journey with us.</p>
+      <div class="name-container">
+        <input
+          type="text"
+          placeholder="First Name"
+          class="input-field"
+          id="firstName"
+          required
+        />
+        <input
+          type="text"
+          placeholder="Last Name"
+          class="input-field b"
+          id="lastName"
+          required
+        />
+      </div>
+      <input
+        type="text"
+        placeholder="Phone Number"
+        class="input-field b"
+        id="phoneNumber"
+        required
+      />
+      <input
+        type="email"
+        placeholder="Email"
+        class="input-field"
+        id="email"
+        required
+      />
+      <input
+        type="text"
+        placeholder="Username"
+        class="input-field b"
+        id="username"
+        required
+      />
+      <input
+        type="password"
+        placeholder="Password"
+        class="input-field b"
+        id="password"
+        required
+      /><br />
+      <button class="btn" id="submitBtn">Submit</button>
+      <p id="error-message" class="error-message"></p>
+    </div>
+
+    <!-- Custom Modal -->
+    <div id="loginModal" class="modal" style="display: none">
+      <div class="modal-content">
+        <h3>Sign Up Successful!</h3>
+        <p>Welcome to SoleStyle.</p>
+        <button class="close-btn" onclick="closeModal()">OK</button>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        // Set video volume
+        $(".voice")[0].volume = 0.11;
+
+        // Input focus effect
+        $(".input-field")
+          .on("focus", function () {
+            $(this).css("box-shadow", "0 0 5px #007bff");
+          })
+          .on("blur", function () {
+            $(this).css("box-shadow", "none");
+          });
+
+        // Submit button click
+        $("#submitBtn").click(async function () {
+          const firstName = $("#firstName").val().trim();
+          const lastName = $("#lastName").val().trim();
+          const phoneNumber = $("#phoneNumber").val().trim();
+          const email = $("#email").val().trim();
+          const username = $("#username").val().trim();
+          const password = $("#password").val().trim();
+          const errorMessage = $("#error-message");
+
+          // Reset error style
+          errorMessage.hide().text("");
+
+          if (
+            !firstName ||
+            !lastName ||
+            !phoneNumber ||
+            !email ||
+            !username ||
+            !password
+          ) {
+            errorMessage.text("Please fill in all fields.").slideDown();
+            return;
+          }
+
+          if (!validateEmail(email)) {
+            errorMessage
+              .text("Please enter a valid email address.")
+              .slideDown();
+            return;
+          }
+
+          if (!validatePhoneNumber(phoneNumber)) {
+            errorMessage
+              .text("Please enter a valid 11-digit phone number.")
+              .slideDown();
+            return;
+          }
+
+          const newUser = {
+            firstName,
+            lastName,
+            phoneNumber,
+            email,
+            username,
+            password,
+          };
+
+          try {
+            const success = await saveUserData(newUser);
+            if (success) {
+              errorMessage.text("").hide();
+              $("#loginModal").fadeIn(); // fade-in modal
+            }
+          } catch (error) {
+            errorMessage
+              .text("Error saving user data. Please try again.")
+              .slideDown();
+            console.error("Error:", error);
+          }
+        });
+
+        // Modal click outside close
+        $(window).on("click", function (event) {
+          if (event.target === $("#loginModal")[0]) {
+            $("#loginModal").fadeOut(() => {
+              window.location.href = "ass_1.html";
+            });
+          }
+        });
+      });
+
+      function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+      }
+
+      function validatePhoneNumber(phone) {
+        const re = /^\d{11}$/;
+        return re.test(phone);
+      }
+
+      async function saveUserData(newUser) {
+        try {
+          let users = JSON.parse(localStorage.getItem("user_data")) || [];
+          const userExists = users.some(
+            (user) =>
+              user.username === newUser.username || user.email === newUser.email
+          );
+
+          if (userExists) {
+            $("#error-message")
+              .text("Username or email already exists.")
+              .slideDown();
+            return false;
+          }
+
+          users.push(newUser);
+          localStorage.setItem("user_data", JSON.stringify(users));
+          return true;
+        } catch (error) {
+          console.error("Error saving user data:", error);
+          throw error;
+        }
+      }
+
+      function closeModal() {
+        $("#loginModal").fadeOut(() => {
+          window.location.href = "ass_1.html";
+        });
+      }
+    </script>
+  </body>
+</html>
